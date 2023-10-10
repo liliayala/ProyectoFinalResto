@@ -43,13 +43,14 @@ public class AccesoProducto {
         }
     
     }
-  
-    public void modificarPrecioProducto(int idP){
+        //modificar el precio
+    public void modificarPrecioProducto(double precio,int idP){
         String sql = "UPDATE producto SET precio = ? WHERE idProducto = ?";
         
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1,idP);
+            ps.setDouble(1, precio);
+            ps.setInt(2,idP);
             int fila = ps.executeUpdate();
             if(fila == 1){
             JOptionPane.showMessageDialog(null, "Precio modificado Exitosamente");
@@ -67,7 +68,7 @@ public class AccesoProducto {
     public List<Producto> ListaDeProducto(){
         List<Producto> productos = new ArrayList<>();
         
-        String sql = "SELECT idProducto,nombreProducto,cantidad,precio FROM producto";
+        String sql = "SELECT idProducto,nombreProducto,precio FROM producto";
         try {
             PreparedStatement ps =  connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -76,7 +77,6 @@ public class AccesoProducto {
             Producto producto = new Producto();
              producto.setIdProducto(rs.getInt("idProducto"));
              producto.setNombreProducto(rs.getString("nombreProducto"));
-             producto.setCantidad(rs.getInt("cantidad"));
              producto.setPrecio(rs.getDouble("precio"));
              productos.add(producto);
             }
@@ -87,12 +87,13 @@ public class AccesoProducto {
         return productos;
     }
     // METODO PARA MODIFICAR EL STOCK DE UN PRODUCTO
-    public void modificarStockProducto(int idP){
+    public void modificarStockProducto( int cantidad,int idP){
                 // consulta a base de datos
         String sql= "UPDATE producto SET cantidad = ? WHERE idProducto = ?";
         try {             //llamando a la conexion de la bese de datos
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1,idP);
+            ps.setInt(1, cantidad);
+            ps.setInt(2,idP);
             int fila = ps.executeUpdate();
             if(fila == 1){
             JOptionPane.showMessageDialog(null, "Stock del producto modificado Exitosamente");
@@ -109,7 +110,7 @@ public class AccesoProducto {
     
      public Producto buscarProducto(int idP){
          Producto producto = null;
-     String sql = "SELECT nombreProducto, cantidad, precio WHERE idProducto = ?";
+     String sql = "SELECT idProducto,nombreProducto, cantidad, precio  FROM producto WHERE idProducto = ?";
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, idP);
@@ -132,4 +133,29 @@ public class AccesoProducto {
         }
         return producto;
      }
+     
+     
+     
+      public List<Producto> obtenerProducto(int idP){
+        List<Producto> productos = new ArrayList<>();
+        
+        String sql = "SELECT idProducto,nombreProducto,precio FROM producto";
+        try {
+            PreparedStatement ps =  connection.prepareStatement(sql);
+            ps.setInt(1, idP);
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+            Producto producto = new Producto();
+             producto.setIdProducto(rs.getInt("idProducto"));
+             producto.setNombreProducto(rs.getString("nombreProducto"));
+             producto.setPrecio(rs.getDouble("precio"));
+             productos.add(producto);
+            }
+            ps.close();
+        } catch (SQLException ex) {
+           JOptionPane.showMessageDialog(null, "No se pudo acceder a los productos");
+        }
+        return productos;
+    }
 }

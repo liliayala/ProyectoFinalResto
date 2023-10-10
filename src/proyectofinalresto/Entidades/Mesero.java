@@ -58,7 +58,7 @@ public class Mesero {
 
     @Override
     public String toString() {
-        return idMesero + ", nombreMesero=" + nombreMesero + ", apellido=" + apellido + ", dniMsero=" + dniMsero;
+        return idMesero + "- " + nombreMesero + "- " + apellido ;
     }
     
     

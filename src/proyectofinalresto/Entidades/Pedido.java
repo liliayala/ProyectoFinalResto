@@ -8,24 +8,24 @@ public class Pedido {
     private Mesa mesa;
     private Mesero mesero;
     private Producto producto;
-    private double valorTotal;
+    private String estado;
 
-    public Pedido(int idPedido, Mesa mesa, Mesero mesero, Producto producto, double valorTotal) {
+    public Pedido(int idPedido, Mesa mesa, Mesero mesero, Producto producto, String estado) {
         this.idPedido = idPedido;
         this.mesa = mesa;
         this.mesero = mesero;
         this.producto = producto;
-        this.valorTotal = valorTotal;
+        this.estado = estado;
     }
 
     public Pedido() {
     }
 
-    public Pedido(Mesa mesa, Mesero mesero, Producto producto, double valorTotal) {
+    public Pedido(Mesa mesa, Mesero mesero, Producto producto, String estado) {
         this.mesa = mesa;
         this.mesero = mesero;
         this.producto = producto;
-        this.valorTotal = valorTotal;
+        this.estado = estado;
     }
 
     public int getIdPedido() {
@@ -60,17 +60,17 @@ public class Pedido {
         this.producto = producto;
     }
 
-    public double getValorTotal() {
-        return valorTotal;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setValorTotal(double valorTotal) {
-        this.valorTotal = valorTotal;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     @Override
     public String toString() {
-        return  idPedido + ", mesa=" + mesa + ", mesero=" + mesero + ", producto=" + producto + ", valorTotal=" + valorTotal;
+        return  idPedido + ", mesa=" + mesa + ", mesero=" + mesero + ", producto=" + producto + ", valorTotal=" + estado;
     }
     
     

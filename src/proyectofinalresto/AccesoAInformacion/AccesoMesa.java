@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -74,5 +76,49 @@ public class AccesoMesa {
         
     } 
    
+   public Mesa buscarMesa(int idM){
+       Mesa mesa = null;
+       String sql = " SELECT numero,capacidad,estado WHERE idMesa = ?";
+        try {
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, idM);
+           ResultSet rs = ps.executeQuery();
+            if(rs.next()){
+               mesa = new Mesa();
+               mesa.setIdMesa(idM);
+               mesa.setNumero(rs.getInt("numero"));
+               mesa.setCapacidad(rs.getInt("capacidad"));
+               mesa.setEstado(true);
+           }
+            ps.close();
+        } catch (SQLException ex) {
+           JOptionPane.showMessageDialog(null, "Ocurrio un error en la busqueda");
+        }catch(NullPointerException ne){
+         JOptionPane.showMessageDialog(null, "Id ingresado no existe! O la mesa seleccionada no esta en funcionamiento");
+        }
+        return mesa;
+   }
    
+   public List<Mesa> ListarMesa(){
+        List<Mesa> mesas = new ArrayList<>();
+        
+        String sql = "SELECT idMesa, numero,capacidad,estado FROM mesa";
+        try {
+            PreparedStatement ps =  connection.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            
+            while(rs.next()){
+            Mesa mesa = new Mesa();
+             mesa.setIdMesa(rs.getInt("idMesa"));
+             mesa.setNumero(rs.getInt("numero"));
+             mesa.setCapacidad(rs.getInt("capacidad"));
+             mesa.setEstado(rs.getBoolean("estado"));
+             mesas.add(mesa);
+            }
+            ps.close();
+        } catch (SQLException ex) {
+           JOptionPane.showMessageDialog(null, "No se pudo acceder a la informacion de mesas");
+        }
+        return mesas;
+    }
 }
