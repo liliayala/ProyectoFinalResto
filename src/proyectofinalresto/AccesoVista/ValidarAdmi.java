@@ -53,7 +53,7 @@ public class ValidarAdmi extends javax.swing.JInternalFrame {
         jLabel2.setText("Panel exclusivo de Administración");
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jLabel3.setText("Identifiquese con su Documento y ID personal");
+        jLabel3.setText("Identifiquese con su  ID personal");
 
         jLabel5.setText("Ingrese ID ");
 
@@ -78,28 +78,30 @@ public class ValidarAdmi extends javax.swing.JInternalFrame {
         escritorioAdmiLayout.setHorizontalGroup(
             escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(escritorioAdmiLayout.createSequentialGroup()
-                .addGap(155, 155, 155)
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(escritorioAdmiLayout.createSequentialGroup()
                 .addGroup(escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(escritorioAdmiLayout.createSequentialGroup()
                         .addGap(133, 133, 133)
                         .addComponent(jLabel1))
                     .addGroup(escritorioAdmiLayout.createSequentialGroup()
                         .addGap(122, 122, 122)
-                        .addGroup(escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(escritorioAdmiLayout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(69, 69, 69)
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextid, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel3)))
+                        .addComponent(jLabel4)
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextid, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(escritorioAdmiLayout.createSequentialGroup()
                         .addGap(267, 267, 267)
                         .addComponent(jButton1)))
-                .addGap(129, 161, Short.MAX_VALUE))
+                .addGap(129, 185, Short.MAX_VALUE))
+            .addGroup(escritorioAdmiLayout.createSequentialGroup()
+                .addGroup(escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(escritorioAdmiLayout.createSequentialGroup()
+                        .addGap(155, 155, 155)
+                        .addComponent(jLabel2))
+                    .addGroup(escritorioAdmiLayout.createSequentialGroup()
+                        .addGap(168, 168, 168)
+                        .addComponent(jLabel3)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         escritorioAdmiLayout.setVerticalGroup(
             escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,12 +161,14 @@ public class ValidarAdmi extends javax.swing.JInternalFrame {
             
            }else{
            JOptionPane.showMessageDialog(this, "Los Datos ingresados no corresponden al personal de Administración, verifique sus datos");
+           jTextid.setText("");
            }
         }else{
             JOptionPane.showMessageDialog(this,  "El campo no puede ir vacio!");
         }
         }catch(NumberFormatException nf){
         JOptionPane.showMessageDialog(this, "El campo lleva solo numeros!");
+        jTextid.setText("");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

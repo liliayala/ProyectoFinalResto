@@ -112,4 +112,74 @@ public class AccesoPedido {
         }
         return pedidos;
     }
+    
+    
+    //join 
+     public List<Pedido> infoPedido(int id){
+ 
+        List<Pedido> pedidos = new ArrayList<>();
+        String sql = "SELECT numero,capacidad,nombre,nombreProducto,precio,pedido.estado FROM pedido JOIN mesa ON pedido.idMesa = mesa.idMesa JOIN mesero ON pedido.idMesero = mesero.idMesero JOIN producto ON pedido.idProducto = producto.idProducto WHERE idPedido = ?";
+        try {
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Pedido pedido= new Pedido();
+                pedido.setIdPedido(rs.getInt("idPedido"));
+                
+                Mesa mesa = new Mesa();
+            mesa.setNumero(rs.getInt("numero"));
+            mesa.setCapacidad(rs.getInt("capacidad"));
+            pedido.setMesa(mesa);
+                Mesero mesero = new Mesero();
+            mesero.setNombreMesero(rs.getString("nombre"));
+            pedido.setMesero(mesero);
+                
+            Producto producto = new Producto();
+            producto.setNombreProducto(rs.getString("nombreProducto"));
+            producto.setPrecio(rs.getDouble("precio"));
+            pedido.setProducto(producto);
+               pedido.setEstado(rs.getString("estado"));
+            
+            pedidos.add(pedido);
+            }
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Ocurrio un error al acceder a pedido");
+        }
+        return pedidos;
+    }
+     
+     public Pedido buscarPedido(int idP){
+         Pedido pedido = null;
+     String sql = "SELECT idPedido,idMesa, idMesero, idProducto,estado  FROM pedido WHERE idPedido = ?";
+        try {
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, idP);
+            ResultSet rs = ps.executeQuery();
+            
+            if(rs.next()){    
+             pedido = new Pedido();
+             pedido.setIdPedido(rs.getInt("idPedido"));
+             Mesa mesa = new Mesa();
+             mesa.setIdMesa(rs.getInt("idMesa"));
+             pedido.setMesa(mesa);
+             Mesero mesero = new Mesero();
+             mesero.setIdMesero(rs.getInt("idMesero"));
+             pedido.setMesero(mesero);
+             Producto producto = new Producto(); 
+             producto.setIdProducto(rs.getInt("idProducto"));
+             pedido.setProducto(producto);
+             pedido.setEstado(rs.getString("estado"));
+            }
+            ps.close();
+            
+        } catch (SQLException ex) {
+          JOptionPane.showMessageDialog(null, "No se pudo ingresar a productos");
+        }catch(NullPointerException ne){
+        JOptionPane.showMessageDialog(null, "El id del producto ingresado no existe");
+        }
+        return pedido;
+     }
 }

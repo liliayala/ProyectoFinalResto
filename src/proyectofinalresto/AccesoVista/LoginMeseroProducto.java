@@ -142,12 +142,14 @@ public class LoginMeseroProducto extends javax.swing.JInternalFrame {
             escritorioPanel.moveToFront(acceso);
            }else{
            JOptionPane.showMessageDialog(this, "Dni ingresado no corresponde a ningun personal de servicio");
+           jTextFielddni.setText("");
            }
         }else{
             JOptionPane.showMessageDialog(this,  "El campo no puede ir vacio!");
         }
         }catch(NumberFormatException nf){
         JOptionPane.showMessageDialog(this, "El campo lleva solo numeros!");
+        jTextFielddni.setText("");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

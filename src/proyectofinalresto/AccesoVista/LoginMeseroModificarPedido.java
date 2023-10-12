@@ -132,12 +132,14 @@ public class LoginMeseroModificarPedido extends javax.swing.JInternalFrame {
             escritoriologin.moveToFront(acceso);
            }else{
            JOptionPane.showMessageDialog(this, "Dni ingresado no corresponde a ningun personal de servicio");
+           jTextdni.setText("");
            }
         }else{
             JOptionPane.showMessageDialog(this,  "El campo no puede ir vacio!");
         }
         }catch(NumberFormatException nf){
         JOptionPane.showMessageDialog(this, "El campo lleva solo numeros!");
+        jTextdni.setText("");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
