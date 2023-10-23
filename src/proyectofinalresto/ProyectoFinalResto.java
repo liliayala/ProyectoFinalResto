@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package proyectofinalresto;
 
 import proyectofinalresto.AccesoAInformacion.AccesoMesa;
@@ -10,15 +6,9 @@ import proyectofinalresto.AccesoAInformacion.Conexion;
 import proyectofinalresto.Entidades.Mesa;
 import proyectofinalresto.Entidades.Producto;
 
-/**
- *
- * @author ayala
- */
+
 public class ProyectoFinalResto {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         
         

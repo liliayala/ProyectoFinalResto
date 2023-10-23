@@ -1,4 +1,3 @@
-
 package proyectofinalresto.AccesoAInformacion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,7 +13,6 @@ import proyectofinalresto.Entidades.Mesa;
 import proyectofinalresto.Entidades.Mesero;
 import proyectofinalresto.Entidades.Pedido;
 import proyectofinalresto.Entidades.Producto;
-
 
 public class AccesoPedido {
     

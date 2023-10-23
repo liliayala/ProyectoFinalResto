@@ -1,7 +1,6 @@
 
 package proyectofinalresto.Entidades;
 
-
 public class Producto {
     private int idProducto;
     private String nombreProducto;

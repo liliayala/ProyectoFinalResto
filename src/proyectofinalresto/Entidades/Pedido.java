@@ -1,6 +1,4 @@
-
 package proyectofinalresto.Entidades;
-
 
 public class Pedido {
     
