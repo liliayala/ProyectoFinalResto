@@ -57,10 +57,10 @@ public class AccesPermitidoModificarPedido extends javax.swing.JInternalFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Ingrese ID Pedido:");
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 102));
+        jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Buscar");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -90,7 +90,7 @@ public class AccesPermitidoModificarPedido extends javax.swing.JInternalFrame {
         jTextmesa.setEditable(false);
         jTextmesa.setForeground(new java.awt.Color(0, 0, 0));
 
-        jButtonConfirmar.setBackground(new java.awt.Color(102, 102, 102));
+        jButtonConfirmar.setBackground(new java.awt.Color(0, 153, 153));
         jButtonConfirmar.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jButtonConfirmar.setForeground(new java.awt.Color(0, 0, 0));
         jButtonConfirmar.setText("Confirmar");
@@ -100,7 +100,7 @@ public class AccesPermitidoModificarPedido extends javax.swing.JInternalFrame {
             }
         });
 
-        jButtonCamEstado.setBackground(new java.awt.Color(102, 102, 102));
+        jButtonCamEstado.setBackground(new java.awt.Color(0, 153, 153));
         jButtonCamEstado.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jButtonCamEstado.setForeground(new java.awt.Color(0, 0, 0));
         jButtonCamEstado.setText("Cambiar Estado");
@@ -119,10 +119,10 @@ public class AccesPermitidoModificarPedido extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 102));
+        jButton2.setBackground(new java.awt.Color(0, 153, 153));
         jButton2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jButton2.setText("Salir");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir_1.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -134,50 +134,47 @@ public class AccesPermitidoModificarPedido extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(129, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(144, 144, 144))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(86, 86, 86)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel3))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel4)))))
+                    .addComponent(jLabel7)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel5)
+                        .addComponent(jLabel4)))
                 .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextpedido, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1)
-                        .addGap(131, 131, 131))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButtonConfirmar)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextestado, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                                    .addComponent(jTextmesa)
-                                    .addComponent(jTextmesero)
-                                    .addComponent(jTextproducto))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(128, 128, 128)
-                                    .addComponent(jButtonCamEstado))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonConfirmar)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextestado, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                            .addComponent(jTextmesa)
+                            .addComponent(jTextmesero)
+                            .addComponent(jTextproducto))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(128, 128, 128)
+                            .addComponent(jButtonCamEstado))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(30, 30, 30))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jCheckBox1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(200, 200, 200))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(129, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextpedido)
+                        .addGap(50, 50, 50)
+                        .addComponent(jButton1)
+                        .addGap(131, 131, 131))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(144, 144, 144))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,14 +187,17 @@ public class AccesPermitidoModificarPedido extends javax.swing.JInternalFrame {
                 .addComponent(jLabel2)
                 .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextpedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(jButton1)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextpedido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextmesa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextmesero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
@@ -213,7 +213,7 @@ public class AccesPermitidoModificarPedido extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonConfirmar)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9))
         );
 
@@ -225,42 +225,24 @@ public class AccesPermitidoModificarPedido extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-                
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       jCheckBox1.setSelected(false);
-       try {
-       String idpedi = jTextpedido.getText();
-       if(!idpedi.isEmpty()){
-           int id = Integer.parseInt(idpedi);
-           AccesoPedido accespedido = new AccesoPedido();
-           Pedido pedido = accespedido.buscarPedido(id);
-           if(pedido!=null){
-              jTextmesa.setText(pedido.getMesa().getIdMesa()+"");
-              jTextmesero.setText(pedido.getMesero().getIdMesero()+"");
-              jTextproducto.setText(pedido.getProducto().getIdProducto()+"");
-              jTextestado.setText(pedido.getEstado());
-           
-           }
-       }else{
-           JOptionPane.showMessageDialog(this, "El campo no puede ir vacio");
-       }
-       
-    } catch (NumberFormatException nf) {
-        JOptionPane.showMessageDialog(this, "El campo no puede llevar letras");
-    } catch (NullPointerException np){
-        JOptionPane.showMessageDialog(this, "id ingresdo inexistente");
-    }    
-    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        limpiarCampos();
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jButtonCamEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCamEstadoActionPerformed
-    
-    jTextestado.setEditable(true);
-             
+
+        jTextestado.setEditable(true);
+
     }//GEN-LAST:event_jButtonCamEstadoActionPerformed
 
     private void jButtonConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmarActionPerformed
@@ -287,14 +269,32 @@ public class AccesPermitidoModificarPedido extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jButtonConfirmarActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-    limpiarCampos();
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jCheckBox1.setSelected(false);
+        try {
+            String idpedi = jTextpedido.getText();
+            if(!idpedi.isEmpty()){
+                int id = Integer.parseInt(idpedi);
+                AccesoPedido accespedido = new AccesoPedido();
+                Pedido pedido = accespedido.buscarPedido(id);
+                if(pedido!=null){
+                    jTextmesa.setText(pedido.getMesa().getIdMesa()+"");
+                    jTextmesero.setText(pedido.getMesero().getIdMesero()+"");
+                    jTextproducto.setText(pedido.getProducto().getIdProducto()+"");
+                    jTextestado.setText(pedido.getEstado());
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
-    
+                }
+            }else{
+                JOptionPane.showMessageDialog(this, "El campo no puede ir vacio");
+            }
+
+        } catch (NumberFormatException nf) {
+            JOptionPane.showMessageDialog(this, "El campo no puede llevar letras");
+        } catch (NullPointerException np){
+            JOptionPane.showMessageDialog(this, "id ingresdo inexistente");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+                    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
