@@ -41,6 +41,7 @@ private RestoPrincipal rp;
         jLabel2.setText("Panel de Gestiones");
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/lupa.png"))); // NOI18N
         jLabel3.setText("Identifiquese con su Documento: ");
 
         jButton1.setBackground(new java.awt.Color(102, 102, 102));
