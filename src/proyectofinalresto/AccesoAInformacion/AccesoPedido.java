@@ -39,7 +39,7 @@ public class AccesoPedido {
          ResultSet rs = ps.getGeneratedKeys();
          if(rs.next()){
          pedido.setIdPedido(rs.getInt(1));
-         JOptionPane.showMessageDialog(null, "Pedido realizado exitosamente 😄😄");
+         
          }
          ps.close();
         } catch (SQLException ex) {

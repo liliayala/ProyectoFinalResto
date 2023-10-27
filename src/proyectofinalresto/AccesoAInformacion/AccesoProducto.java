@@ -67,7 +67,7 @@ public class AccesoProducto {
     public List<Producto> ListaDeProducto(){
         List<Producto> productos = new ArrayList<>();
         
-        String sql = "SELECT idProducto,nombreProducto,precio FROM producto";
+        String sql = "SELECT idProducto,nombreProducto, cantidad,precio FROM producto";
         try {
             PreparedStatement ps =  connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -76,6 +76,7 @@ public class AccesoProducto {
             Producto producto = new Producto();
              producto.setIdProducto(rs.getInt("idProducto"));
              producto.setNombreProducto(rs.getString("nombreProducto"));
+             producto.setCantidad(rs.getInt("cantidad"));
              producto.setPrecio(rs.getDouble("precio"));
              productos.add(producto);
             }

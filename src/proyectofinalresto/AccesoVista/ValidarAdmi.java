@@ -24,6 +24,7 @@ private RestoPrincipal rp;
         jLabel4 = new javax.swing.JLabel();
         jTextid = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -34,25 +35,20 @@ private RestoPrincipal rp;
 
         jLabel1.setBackground(new java.awt.Color(0, 153, 153));
         jLabel1.setFont(new java.awt.Font("Algerian", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Panel de Pedidos");
 
         jLabel2.setBackground(new java.awt.Color(0, 153, 153));
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(153, 0, 0));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gestion.png"))); // NOI18N
         jLabel2.setText("Exclusivo de Administración");
 
         jLabel3.setBackground(new java.awt.Color(0, 153, 153));
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Identifiquese con su  ID personal");
-
-        jTextid.setBackground(new java.awt.Color(255, 255, 255));
-        jTextid.setForeground(new java.awt.Color(0, 0, 0));
 
         jButton1.setBackground(new java.awt.Color(102, 102, 102));
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Ingresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,57 +56,70 @@ private RestoPrincipal rp;
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(0, 153, 153));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/salir_1.png"))); // NOI18N
+        jButton2.setBorder(null);
+
         escritorioAdmi.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         escritorioAdmi.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         escritorioAdmi.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         escritorioAdmi.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
         escritorioAdmi.setLayer(jTextid, javax.swing.JLayeredPane.DEFAULT_LAYER);
         escritorioAdmi.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        escritorioAdmi.setLayer(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout escritorioAdmiLayout = new javax.swing.GroupLayout(escritorioAdmi);
         escritorioAdmi.setLayout(escritorioAdmiLayout);
         escritorioAdmiLayout.setHorizontalGroup(
             escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(escritorioAdmiLayout.createSequentialGroup()
-                .addGroup(escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(escritorioAdmiLayout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addComponent(jLabel4))
-                    .addGroup(escritorioAdmiLayout.createSequentialGroup()
-                        .addGap(236, 236, 236)
-                        .addComponent(jTextid, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, escritorioAdmiLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(202, 202, 202)
+                .addComponent(jButton2)
+                .addGap(31, 31, 31))
             .addGroup(escritorioAdmiLayout.createSequentialGroup()
                 .addGroup(escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(escritorioAdmiLayout.createSequentialGroup()
                         .addGap(168, 168, 168)
-                        .addGroup(escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
+                        .addComponent(jLabel1))
+                    .addGroup(escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel3)
+                        .addGroup(escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(escritorioAdmiLayout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(10, 10, 10))))
-                    .addGroup(escritorioAdmiLayout.createSequentialGroup()
-                        .addGap(248, 248, 248)
-                        .addComponent(jButton1)))
-                .addGap(0, 166, Short.MAX_VALUE))
+                                .addGap(122, 122, 122)
+                                .addComponent(jLabel4))
+                            .addGroup(escritorioAdmiLayout.createSequentialGroup()
+                                .addGap(140, 140, 140)
+                                .addComponent(jLabel2)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(escritorioAdmiLayout.createSequentialGroup()
+                .addGap(226, 226, 226)
+                .addComponent(jTextid, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 251, Short.MAX_VALUE))
         );
         escritorioAdmiLayout.setVerticalGroup(
             escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(escritorioAdmiLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addGap(33, 33, 33)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(jTextid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addGroup(escritorioAdmiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(escritorioAdmiLayout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(jButton2)
+                        .addContainerGap(20, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, escritorioAdmiLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(45, 45, 45))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -160,6 +169,7 @@ private RestoPrincipal rp;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane escritorioAdmi;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

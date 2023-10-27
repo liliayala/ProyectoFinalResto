@@ -35,7 +35,7 @@ public class RestoPrincipal extends javax.swing.JFrame {
         );
         desktopMainLayout.setVerticalGroup(
             desktopMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 669, Short.MAX_VALUE)
+            .addGap(0, 639, Short.MAX_VALUE)
         );
 
         jMenuBar1.setBackground(new java.awt.Color(51, 51, 51));
@@ -43,9 +43,11 @@ public class RestoPrincipal extends javax.swing.JFrame {
 
         jMenu1.setBackground(new java.awt.Color(0, 0, 0));
         jMenu1.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/service_restaurant_icon_146861.png"))); // NOI18N
         jMenu1.setText("Menu");
         jMenu1.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/resto.png"))); // NOI18N
         jMenuItem2.setText("Generar Pedido");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +60,7 @@ public class RestoPrincipal extends javax.swing.JFrame {
 
         jMenu3.setBackground(new java.awt.Color(0, 0, 0));
         jMenu3.setForeground(new java.awt.Color(255, 255, 255));
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/databasesearch_basededato_12920.png"))); // NOI18N
         jMenu3.setText("Solicitudes y Modificaciones");
         jMenu3.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         jMenu3.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +69,7 @@ public class RestoPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gestion.png"))); // NOI18N
         jMenuItem3.setText("Modificaciones Producto");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +78,7 @@ public class RestoPrincipal extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem3);
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/gestion.png"))); // NOI18N
         jMenuItem1.setText("Moficicaciones Pedido");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +99,7 @@ public class RestoPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopMain, javax.swing.GroupLayout.DEFAULT_SIZE, 671, Short.MAX_VALUE)
+            .addComponent(desktopMain, javax.swing.GroupLayout.DEFAULT_SIZE, 641, Short.MAX_VALUE)
         );
 
         pack();
@@ -162,7 +167,7 @@ public void abrirGestion (){
 
 desktopMain.removeAll();
 desktopMain.repaint();
-GestionarPedido acceso = new GestionarPedido();
+GenerarPedido acceso = new GenerarPedido();
 acceso.setVisible(true);
 desktopMain.add(acceso);
 desktopMain.moveToFront(acceso);
