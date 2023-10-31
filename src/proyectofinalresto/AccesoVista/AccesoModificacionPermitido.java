@@ -272,7 +272,11 @@ public class AccesoModificacionPermitido extends javax.swing.JInternalFrame {
         }
         
         }catch(NumberFormatException nf){
-        JOptionPane.showMessageDialog(this,"El id ingresado no existe!");
+        JOptionPane.showMessageDialog(this,"Formato incompatible, ingrese numero/s");
+        jTextId.setText("");
+        }catch(NullPointerException no){
+            JOptionPane.showMessageDialog(this, "Id ingresado no existe!");
+            jTextId.setText("");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -175,9 +175,30 @@ public class AccesoPedido {
             
         } catch (SQLException ex) {
           JOptionPane.showMessageDialog(null, "No se pudo ingresar a productos");
-        }catch(NullPointerException ne){
-        JOptionPane.showMessageDialog(null, "El id del producto ingresado no existe");
+//        }catch(NullPointerException ne){
+//        JOptionPane.showMessageDialog(null, "El id del producto ingresado no existe");
         }
         return pedido;
      }
+     
+     public void borrarPedido(int idMesa, int idMesero,int idProducto) {
+        String sql = "DELETE  FROM pedido WHERE idMesa = ? and idMesero = ? and idProducto = ? and estado = 'Cancelado'";
+        try {
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, idMesa);
+            ps.setInt(2, idMesero);
+            ps.setInt(3, idProducto);
+            int fila = ps.executeUpdate();
+            if (fila > 0) {
+                JOptionPane.showMessageDialog(null, "¨Pedido Eliminada Exitosamente 😄😄");
+            }else{
+            JOptionPane.showMessageDialog(null, "No se encontro coincidencia en argumentos seleccionados, o el estado es diferente a 'Cancelado'");
+            }
+            ps.close();
+        } catch (SQLException ex) {
+
+            JOptionPane.showMessageDialog(null, "Ocurrio un error al acceder a pedidos");
+        }
+
+    }
 }

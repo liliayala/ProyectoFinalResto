@@ -280,6 +280,9 @@ public class AccesPermitidoModificarPedido extends javax.swing.JInternalFrame {
                     jTextproducto.setText(pedido.getProducto().getIdProducto()+"");
                     jTextestado.setText(pedido.getEstado());
 
+                }else{
+                    JOptionPane.showMessageDialog(this, "id ingresdo inexistente");
+                    jTextpedido.setText("");
                 }
             }else{
                 JOptionPane.showMessageDialog(this, "El campo no puede ir vacio");
